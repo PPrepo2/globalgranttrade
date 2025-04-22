@@ -207,7 +207,7 @@ module.exports.editUser_post = async(req, res) =>{
 module.exports.deletePage = async(req, res) =>{
   try {
     await User.deleteOne({ _id: req.params.id });
-      res.redirect("/adminRouste")
+      res.redirect("/adminRoute")
     } catch (error) {
       console.log(error);
     }
