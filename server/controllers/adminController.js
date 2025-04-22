@@ -172,7 +172,7 @@ module.exports.editUser_post = async(req, res) =>{
           total_profit: req.body.total_profit,
           ref_bonus: req.body.ref_bonus,
           refNumb: req.body.refNumb,
-          balance: req.body.balance,
+           balance: Number(req.body.balance) || 0,
           bonus: req.body.bonus,
           bank_name: req.body.bank_name,
           account_name: req.body.account_name,
