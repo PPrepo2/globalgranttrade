@@ -510,7 +510,15 @@
       
       <div class="col">
         <label for="balance">Balance</label>
-        <input type="text" class="form-control" id="balance" name="balance" value=" <%=user.balance%> " placeholder="balance" required>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="balance"
+                      name="balance"
+                      value="<%= user.balance !== undefined ? user.balance : 0 %>"
+                      placeholder="Balance"
+                    
+                    >
       </div>
   
     </div>
@@ -721,6 +729,15 @@
             </div>
         </footer>
     </main> <!-- / main -->
+
+        <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const numberInputs = document.querySelectorAll('input[type="number"]');
+      numberInputs.forEach(input => {
+        console.log(`${input.name}: ${input.value}`);
+      });
+    });
+  </script>
 
     <!-- JAVASCRIPT-->
     <!-- Theme JS -->
